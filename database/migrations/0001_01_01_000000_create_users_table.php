@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('nom');
             $table->string('prenoms');
             $table->string('email')->unique();
             $table->string('numero')->unique();
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('ville');
             $table->string('password');
-            $table->boolean('is_admin')->default('false');
+            $table->boolean('is_admin')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

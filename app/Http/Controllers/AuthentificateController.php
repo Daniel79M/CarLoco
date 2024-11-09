@@ -4,11 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use App\Models\Commande;
+use App\Models\User;
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class AuthentificateController extends Controller
 {
+
+    public function index()
+    {
+        $users = User::all();
+
+        return view('users.index',
+        ['users' => $users]);
+    }
+
     public function showLoginForm()
     {
         // $commande = Commande::create( [
@@ -48,13 +61,57 @@ class AuthentificateController extends Controller
             'email' => 'Les informations de connexion sont incorrectes.',
         ])->withInput($request->only('email'));
     }
+    
+    public function register(Request $request)
+    {
+        // Validation des champs
+        $request->validate([
+            'nom' => 'required|string|min:3|max:20',
+            'prenoms' => 'required|string|min:3',
+            'numero' => 'required|string|unique:users,numero|min:8',
+            'address' => 'required|string|min:4',
+            'ville' => 'required|string|min:3',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:4|confirmed',
+        ], [
+            'nom.required' => 'Le nom est requis.',
+            'nom.min' => 'Le nom doit contenir au moins 3 caractères.',
+            'email.required' => 'L\'email est requis.',
+            'email.unique' => 'Cet email existe déjà, veuillez le modifier.',
+            'numero.unique' => 'Ce numéro existe déjà, veuillez le modifier.',
+            'numero.required' => 'Le numéro est requis.',
+            'ville.required' => 'La ville est requise.',
+            'address.required' => 'L\'adresse est requise.',
+            'password.required' => 'Le mot de passe est requis.',
+            'password.confirmed' => 'Le mot de passe n\'est pas conforme.',
+        ]);
+    
+        // Création de l'utilisateur
+        $user = User::create([
+            'nom' => $request->nom,
+            'prenoms' => $request->prenoms,
+            'numero' => $request->numero,
+            'address' => $request->address,
+            'ville' => $request->ville,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+    
+        // // Connexion de l'utilisateur après inscription
+        // Auth::login($user);
+    
+        // Redirection vers la page de succès
+        return redirect()->route('login')->withSuccess('Inscription validée');
+    }
+    
+
 
     public function home()  
     {
 
         $cars = Car::with('images')->get();
 
-        return view('welcome', compact('cars'));
+        return view('Home', compact('cars'));
     }
 
     public function logout(Request $request)
