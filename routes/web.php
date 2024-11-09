@@ -21,17 +21,22 @@ Route::post('singIn', [AuthentificateController::class, 'register']);
 
 
 Route::middleware(['auth'])->group(function () {
-    
+
     Route::post('logout', [AuthentificateController::class, 'logout'])->name('logout');
 
     Route::get('Welcome', [AuthentificateController::class, 'home'])->name('Welcome');
 
     Route::resource('cars', CarController::class);
 
-    Route::resource('commandes', CommandeController::class);
+    // Route::resource('commande', CommandeController::class;
+
+    Route::get('/commande/create/{id}', [CommandeController::class, 'create'])->name('commande.create');
+    
+    Route::post('/commande/store', [CommandeController::class, 'store'])->name('commande.store');
+
 
     Route::get('/users', [UserController::class, 'showAllUser'])->name('users.index');
-    
+
     Route::resource('users', AuthentificateController::class);
 });
 

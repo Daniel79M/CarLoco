@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\commandeRequest;
+use App\Models\Car;
 use App\Models\Commande;
 use App\Models\ModePaiment;
 use Illuminate\Http\Request;
@@ -31,11 +32,13 @@ class CommandeController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(string $id)
     {
-        $mode_paiement = ModePaiment::all();
+        $mode_paiements = ModePaiment::all();
+        $car = Car::findOrFail($id);
         return view('Commande.create',[
-            'mode_paiments' => $mode_paiement,
+            'mode_paiments' => $mode_paiements,
+            'car_id' => $car->id
         ]);
     }
 
@@ -48,11 +51,17 @@ class CommandeController extends Controller
             'mode_paiement_id' => $request->mode_paiement_id,
             'user_id' => $request->user_id,
             'car_id' => $request->car_id,
-            'numeroCommande' => rand(11111111, 99999999),
-            // 'numeroCommande' => $request->numeroCommande,
+            'numeroCommande' => $request->numeroCommande,
             'couleur' => $request->couleur,
         ];
-        Commande::create($data);
+
+        Commande::create([
+            'mode_paiement_id' => $data['mode_paiement_id'],
+            'user_id' => Auth::user()->id,
+            'car_id' => $data['car_id'],
+            'numeroCommande' => rand(11111111, 99999999),
+            'couleur' => $data['couleur']
+        ]);
 
         return back()->withSuccess('Opération effectué. vous receverez un mail de validation ');
     }
