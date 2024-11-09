@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\commandeRequest;
 use App\Models\Commande;
+use App\Models\ModePaiment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,10 +15,17 @@ class CommandeController extends Controller
      */
     public function index()
     {
-        $commandes = Commande::where('user_id', '=', Auth::user()->id);
-        return view('Commande.list', [
-            'commandes' => $commandes
-        ]);
+        if(Auth::user()->is_admin = true){
+            $commandes = Commande::all();
+            return view('Commande.list', [
+                'commandes' => $commandes
+            ]);
+        }else{
+            $commandes = Commande::where('user_id', '=', Auth::user()->id);
+            return view('Commande.list', [
+                'commandes' => $commandes
+            ]);
+        }
     }
 
     /**
@@ -25,7 +33,10 @@ class CommandeController extends Controller
      */
     public function create()
     {
-        return view('Commande.create');
+        $mode_paiement = ModePaiment::all();
+        return view('Commande.create',[
+            'mode_paiments' => $mode_paiement,
+        ]);
     }
 
     /**
@@ -37,12 +48,13 @@ class CommandeController extends Controller
             'mode_paiement_id' => $request->mode_paiement_id,
             'user_id' => $request->user_id,
             'car_id' => $request->car_id,
-            'numeroCommande' => $request->numeroCommande,
+            'numeroCommande' => rand(11111111, 99999999),
+            // 'numeroCommande' => $request->numeroCommande,
             'couleur' => $request->couleur,
         ];
-
-
         Commande::create($data);
+
+        return back()->withSuccess('Opération effectué. vous receverez un mail de validation ');
     }
 
     /**

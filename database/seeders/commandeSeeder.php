@@ -13,10 +13,10 @@ class commandeSeeder extends Seeder
      */
     public function run(): void
     {
-        ModePaiment::create([
-            'type' => 'Paiement par carte de credit'
-        ]);
-         // ModePaiment::create([
+        // ModePaiment::create([
+        //     'type' => 'Paiement par carte de credit'
+        // ]);
+        //  ModePaiment::create([
         //     'type' => 'Paiement par cheque'
         // ]);
 

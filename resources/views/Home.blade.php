@@ -3,8 +3,12 @@
 
 
 <div>
-   
-        @include('Components.WelcomeNav_bar')
+    @if (Auth::user()->is_admin === 1)
+        @include('components.AdminNavBar')
+    @elseif(Auth::user()->is_admin === 'false')
+        @include('Components.Nav_bar')
+    @endif
+    {{-- @include('Components.Nav_bar') --}}
 
 
     <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');"
@@ -49,7 +53,7 @@
                         A small river named Duden flows by their place and supplies it with the necessary
                         regelialia. It
                         is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                    <p><a href="#" class="btn btn-primary py-3 px-4">Search Vehicle</a></p>
+                    <p><a href="#" class="btn btn-info py-3 px-4">Search Vehicle</a></p>
                 </div>
             </div>
         </div>
@@ -82,10 +86,9 @@
                             {{-- <p class="looking_text">Start per day $4500</p> --}}
                             <p><strong>Modèle :</strong> {{ $car->model }} | <strong>Année :</strong>
                                 {{ $car->year }}</p>
-                            <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-info py-2 mr-1">
-                                    Acheter</a> <a href="{{ route('cars.show', $car->id) }}"
-                                    class="btn btn-secondary py-2 ml-1">Plus de Détail</a>
-                            </p>
+                            <p class="d-flex mb-0 d-block">
+                                <a href="#" class="btn btn-info py-2 mr-1"> Acheter</a> 
+                                <a href="{{ route('cars.show', $car->id) }}"class="btn btn-secondary py-2 ml-1">Voir +</a></p>
                             {{-- <div class="read_bt"><a href="{{ route('cars.show', $car->id) }}" class="btn btn-info">Voir Détails</a></div> --}}
                         </div>
                     </div>

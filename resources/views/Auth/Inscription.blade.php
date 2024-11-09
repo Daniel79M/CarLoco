@@ -76,7 +76,22 @@
             <h4>Inscription</h4>
             <p>Renseignez vos informations pour vous inscrire</p>
         </div>
-        <form action="">
+        <form action="{{ route('singIn') }}" method="POST">
+            @csrf
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="les_inputs">
                 <div class="first_input">
 
@@ -124,7 +139,7 @@
 
                     <div class="form-group">
                         <label for="confirpassword">Confirmation de Mot de passe</label><br>
-                        <input type="password" id="confirpassword" name="confirpassword"
+                        <input type="password" id="confirpassword" name="password_confirmation"
                             placeholder="confirmer votre mot de passe ici" class="form-control">
                     </div>
 

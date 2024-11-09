@@ -14,15 +14,18 @@ class ModePaimentSeeder extends Seeder
     public function run(): void
     {
         ModePaiment::create([
-            'type' => 'Paiement en liquide'
+            'type' => 'Paiement en liquide',
+            'description' => 'Vous devez vous rendre dans une de nos agences'
         ]);
 
-        // ModePaiment::create([
-        //     'type' => 'Paiement par cheque'
-        // ]);
+        ModePaiment::create([
+            'type' => 'Paiement par cheque',
+            'description' => 'Vous devez vous rendre dans une de nos agences'
+        ]);
 
-        // ModePaiment::create([
-        //     'type' => 'Paiement par carte de credit'
-        // ]);
+        ModePaiment::create([
+            'type' => 'Paiement par carte de credit',
+            'description' => 'Vous devez vous rendre dans une de nos agences'
+        ]);
     }
 }
