@@ -54,7 +54,9 @@ class AuthentificateController extends Controller
 
             $request->session()->regenerate();
             // Rediriger l'utilisateur en fonction de son statut
-                return redirect()->route('Welcome'); 
+                return redirect()->route('Welcome', [
+                    // 'voitures' => $voitures,
+                ]); 
         }
         // Si la tentative de connexion échoue, retourner une erreur
         return redirect()->route('login')->withErrors([
@@ -106,12 +108,39 @@ class AuthentificateController extends Controller
     
 
 
-    public function home()  
+    public function home( Request $request)  
     {
+
+
+        // $voitures = Car::query();
+
+        // // $cars = Car::with('images')->get();
+    
+        // if ($request->filled('categorie')) {
+        //     $voitures->where('categorie', $request->categorie);
+        // }
+    
+        // if ($request->filled('marque')) {
+        //     $voitures->where('marque', $request->marque);
+        // }
+    
+        // if ($request->filled('annee')) {
+        //     $voitures->where('annee', $request->annee);
+        // }
+    
+        // if ($request->filled('modele')) {
+        //     $voitures->where('modele', $request->modele);
+        // }
+    
+        // $voitures = $voitures->get();
+    
 
         $cars = Car::with('images')->get();
 
-        return view('Home', compact('cars'));
+        return view('Home', [
+            'cars' => $cars,
+            // 'voitures' => $voitures,
+        ]);
     }
 
     public function logout(Request $request)
@@ -121,6 +150,36 @@ class AuthentificateController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('login');
+    }
+
+    public function search(Request $request)
+    {
+        $voitures = Car::query();
+
+        $cars = Car::with('images')->get();
+    
+        if ($request->filled('categorie')) {
+            $voitures->where('categorie', $request->categorie);
+        }
+    
+        if ($request->filled('marque')) {
+            $voitures->where('marque', $request->marque);
+        }
+    
+        if ($request->filled('annee')) {
+            $voitures->where('annee', $request->annee);
+        }
+    
+        if ($request->filled('modele')) {
+            $voitures->where('modele', $request->modele);
+        }
+    
+        $voitures = $voitures->get();
+    
+        return view('home', [
+            'cars' => $cars,
+            'voitures' => $voitures,
+        ]);
     }
 
 }

@@ -75,8 +75,10 @@
                             <p><strong>Modèle :</strong> {{ $car->model }} | <strong>Année :</strong>
                                 {{ $car->year }}</p>
                             <p class="d-flex mb-0 d-block">
-                                <a href="#" class="btn btn-info py-2 mr-1"> Acheter</a> 
-                                <a href="{{ route('cars.show', $car->id) }}"class="btn btn-secondary py-2 ml-1">Voir +</a></p>
+                                <a href="#" class="btn btn-info py-2 mr-1"> Acheter</a>
+                                <a href="{{ route('cars.show', $car->id) }}"class="btn btn-secondary py-2 ml-1">Voir
+                                    +</a>
+                            </p>
                             {{-- <div class="read_bt"><a href="{{ route('cars.show', $car->id) }}" class="btn btn-info">Voir Détails</a></div> --}}
                         </div>
                     </div>
@@ -142,6 +144,159 @@
             </div>
         </div>
     </div>
+</section>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Blog</span>
+                <h2>Recent Blog</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                    </a>
+                    <div class="text pt-4">
+                        <div class="meta mb-3">
+                            <div><a href="#">Oct. 29, 2019</a></div>
+                            <div><a href="#">Admin</a></div>
+                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a>
+                        </h3>
+                        <p><a href="#" class="btn btn-primary">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+                    </a>
+                    <div class="text pt-4">
+                        <div class="meta mb-3">
+                            <div><a href="#">Oct. 29, 2019</a></div>
+                            <div><a href="#">Admin</a></div>
+                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a>
+                        </h3>
+                        <p><a href="#" class="btn btn-primary">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+                    </a>
+                    <div class="text pt-4">
+                        <div class="meta mb-3">
+                            <div><a href="#">Oct. 29, 2019</a></div>
+                            <div><a href="#">Admin</a></div>
+                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a>
+                        </h3>
+                        <p><a href="#" class="btn btn-primary">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulaire de filtrage ici -->
+
+<!-- Affichage des Résultats -->
+{{-- <div class="container my-5">
+    <h3 class="text-center mb-4">Résultats de la recherche</h3>
+    @if($voitures->isEmpty())
+        <p class="text-center">Aucune voiture ne correspond à votre recherche.</p>
+    @else
+        <div class="row">
+            @foreach($voitures as $voiture)
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="{{ asset('storage/' . $voiture->images->first()->image_path) }}"
+                                        alt="Image de {{ $car->title }}" class="car-thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $voiture->model }} - {{ $voiture->marque }}</h5>
+                            <p class="card-text">
+                                Catégorie : {{ $voiture->categorie }}<br>
+                                Année : {{ $voiture->year }}
+                            </p>
+                            <a href="{{ route('cars.show', $voiture->id) }}" class="btn btn-primary">Voir Détails</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
+</div> --}}
+
+    <!-- Formulaire de Filtrage des Voitures -->
+
+
+<div class="container my-5">
+    <div class="card p-4 shadow-sm">
+        <h3 class="text-center mb-4">Rechercher une voiture</h3>
+        <form action="{{ route('search') }}" method="GET">
+            <div class="row">
+                <!-- Champ de Filtrage par Catégorie -->
+                <div class="col-md-3 mb-3 text-center">
+                    <label for="categorie" class="form-label">Catégorie</label><br />
+                    <input type="text" name="categorie" id="marque" class="form-control" placeholder="votre choix">
+                    {{-- <select name="categorie" id="categorie" class="form-select">
+                        <option value="">Toutes les catégories</option>
+                        <option value="">Toutes les catégories</option>
+                        <!-- Remplir dynamiquement avec les options des catégories -->
+                    </select> --}}
+                </div>
+
+                <!-- Champ de Filtrage par Marque -->
+                <div class="col-md-3 mb-3 text-center">
+                    <label for="marque" class="form-label">Marque</label><br />
+                    <input type="text" name="marque" id="marque" class="form-control" placeholder="votre choix">
+                    {{-- <select name="marque" id="marque" class="form-select">
+                        <option value="">Toutes les marques</option>
+                        <option value="">Toutes les marques</option>
+                        <!-- Remplir dynamiquement avec les options des marques -->
+                    </select> --}}
+                </div>
+            </div>
+            <div class="row">
+                <!-- Champ de Filtrage par Année -->
+                <div class="col-md-3 mb-3 text-center">
+                    <label for="annee" class="form-label">Année</label><br />
+                    <input type="text" name="annee" id="marque" class="form-control" placeholder="votre choix">
+                    {{-- <select name="annee" id="annee" class="form-select">
+                        <option value="">Toutes les années</option>
+                        <option value="">Toutes les années</option>
+                        <!-- Remplir dynamiquement avec les options des années -->
+                    </select> --}}
+                </div>
+
+                <!-- Champ de Filtrage par Modèle -->
+                <div class="col-md-3 mb-3 text-center">
+                    <label for="modele" class="form-label">Modèle</label><br />
+                    <input type="text" name="modele" id="marque" class="form-control" placeholder="votre choix">
+                    {{-- <select name="modele" id="modele" class="form-select">
+                        <option value="">Tous les modèles</option>
+                        <option value="">Tous les modèles</option>
+                        <!-- Remplir dynamiquement avec les options des modèles -->
+                    </select> --}}
+                </div>
+            </div>
+
+            <!-- Bouton de Recherche -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-3">Rechercher</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 </section>
 
 
