@@ -30,7 +30,7 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->address }}</td>
                             <td>{{ $user->ville }}</td>
-                            {{-- <td></td> --}}
+                            <td></td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -38,4 +38,4 @@
         </div>
     </div>
 </div>
-@include('Components.Footer')
+@include('Components.Footer') 
