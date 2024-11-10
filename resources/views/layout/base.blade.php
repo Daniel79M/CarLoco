@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ URL::asset('css/open-iconic-bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/animate.css')}}">
 
+    <link rel="stylesheet" href="{{ URL::asset('assets/fontawesome/css/all.min.css') }}">
+
     <link rel="stylesheet" href="{{URL::asset('css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{URL::asset('css/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="{{URL::asset('css/magnific-popup.css')}}">
