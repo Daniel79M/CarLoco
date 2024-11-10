@@ -37,7 +37,7 @@
             <div class="col-md-6 wrap-about ftco-animate">
                 <div class="heading-section heading-section-white pl-md-5"><br>
                     <span class="subheading">A propos</span>
-                    <h2 class="mb-4">Bienvenue Carloco</h2>
+                    <h2 class="mb-4">Bienvenue chez Carloco</h2>
 
                     <p>Votre partenaire de confiance pour la vente et la location de voitures et d'engins.</p>
                     <p>Carloco est une entreprise innovante spécialisée dans la vente et la location de voitures. Notre mission est de simplifier et moderniser votre expérience en ligne grâce à une plateforme intuitive qui vous offre un large choix de véhicules adaptés à vos besoins. Profitez de fonctionnalités avancées telles que des recommandations personnalisées et des visites virtuelles pour faciliter votre sélection. Chez CarLoco, nous mettons un point d'honneur à vous fournir un service fiable et de qualité pour que votre parcours soit simple, sécurisé et satisfaisant..</p>
