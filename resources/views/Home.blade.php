@@ -209,7 +209,7 @@
     <!-- Formulaire de filtrage ici -->
 
 <!-- Affichage des Résultats -->
-{{-- <div class="container my-5">
+<div class="container my-5">
     <h3 class="text-center mb-4">Résultats de la recherche</h3>
     @if($voitures->isEmpty())
         <p class="text-center">Aucune voiture ne correspond à votre recherche.</p>
@@ -233,7 +233,7 @@
             @endforeach
         </div>
     @endif
-</div> --}}
+</div>
 
     <!-- Formulaire de Filtrage des Voitures -->
 
