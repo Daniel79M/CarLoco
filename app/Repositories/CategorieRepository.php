@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Interfaces\CategoryInterface;
-use App\Models\categorie;
+use App\Models\categories;
 
 class CategorieRepository  implements CategoryInterface
 {
@@ -17,26 +17,26 @@ class CategorieRepository  implements CategoryInterface
 
     public function index()
     {
-        return categorie::all();
+        return categories::all();
     }
 
     public function show($id)
     {
-        return categorie::findOrFail($id);
+        return categories::findOrFail($id);
     }
 
     public function store(array $data) 
     {
-        return categorie::create($data);
+        return categories::create($data);
     }
 
     public function update(array $data, $id)
     {
-        return categorie::findOrFail($id)->update($data);
+        return categories::findOrFail($id)->update($data);
     }
 
     public function delete($id)
     {
-        return categorie::destroy($id);
+        return categories::destroy($id);
     }
 }

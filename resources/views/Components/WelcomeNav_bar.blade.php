@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="index.html" class="nav-link">Accueil</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">A propos</a></li>
+                <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">A propos</a></li>
                 <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                 
                 <li class="nav-item"><a href="car.html" class="nav-link">Voitures</a></li>

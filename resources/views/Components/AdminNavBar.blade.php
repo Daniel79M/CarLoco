@@ -12,7 +12,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="{{ route('categories.index') }}" class="nav-link">catégories</a></li>
                 <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link">Utilisateurs</a></li>
                 <li class="nav-item"><a href="{{ route('commandes.index') }}" class="nav-link">Les Commande</a></li>
