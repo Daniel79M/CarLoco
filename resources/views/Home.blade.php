@@ -37,7 +37,7 @@
             <div class="col-md-6 wrap-about ftco-animate">
                 <div class="heading-section heading-section-white pl-md-5"><br>
                     <span class="subheading">A propos</span>
-                    <h2 class="mb-4">Bienvenue Carloco</h2>
+                    <h2 class="mb-4">Bienvenue chez Carloco</h2>
 
                     <p>Votre partenaire de confiance pour la vente et la location de voitures et d'engins.</p>
                     <p>Carloco est une entreprise innovante spécialisée dans la vente et la location de voitures. Notre mission est de simplifier et moderniser votre expérience en ligne grâce à une plateforme intuitive qui vous offre un large choix de véhicules adaptés à vos besoins. Profitez de fonctionnalités avancées telles que des recommandations personnalisées et des visites virtuelles pour faciliter votre sélection. Chez CarLoco, nous mettons un point d'honneur à vous fournir un service fiable et de qualité pour que votre parcours soit simple, sécurisé et satisfaisant..</p>
@@ -71,7 +71,6 @@
                             </div>
                             <h3 class="types_text">{{ $car->marque }}</h3>
                             <p class="looking_text"><strong>Prix :</strong> {{ number_format($car->price, 2) }}FCFA</p>
-                            {{-- <p class="looking_text">Start per day $4500</p> --}}
                             <p><strong>Modèle :</strong> {{ $car->model }} | <strong>Année :</strong>
                                 {{ $car->year }}</p>
                             <p class="d-flex mb-0 d-block">
@@ -209,31 +208,10 @@
     <!-- Formulaire de filtrage ici -->
 
 <!-- Affichage des Résultats -->
-{{-- <div class="container my-5">
+ <div class="container my-5">
     <h3 class="text-center mb-4">Résultats de la recherche</h3>
-    @if($voitures->isEmpty())
-        <p class="text-center">Aucune voiture ne correspond à votre recherche.</p>
-    @else
-        <div class="row">
-            @foreach($voitures as $voiture)
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <img src="{{ asset('storage/' . $voiture->images->first()->image_path) }}"
-                                        alt="Image de {{ $car->title }}" class="car-thumbnail">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $voiture->model }} - {{ $voiture->marque }}</h5>
-                            <p class="card-text">
-                                Catégorie : {{ $voiture->categorie }}<br>
-                                Année : {{ $voiture->year }}
-                            </p>
-                            <a href="{{ route('cars.show', $voiture->id) }}" class="btn btn-primary">Voir Détails</a>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    @endif
-</div> --}}
+
+</div> 
 
     <!-- Formulaire de Filtrage des Voitures -->
 
