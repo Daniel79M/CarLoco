@@ -23,7 +23,7 @@ Route::post('singIn', [AuthentificateController::class, 'register']);
 
 
 Route::middleware(['auth'])->group(function () {
-    
+
     Route::post('logout', [AuthentificateController::class, 'logout'])->name('logout');
 
     Route::get('search', [AuthentificateController::class, 'search'])->name('search');
@@ -31,6 +31,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('Welcome', [AuthentificateController::class, 'home'])->name('Welcome');
 
     Route::resource('cars', CarController::class);
+
+
+    // Route::resource('commande', CommandeController::class;
+
+    Route::get('/commande/create/{id}', [CommandeController::class, 'create'])->name('commande.create');
 
     Route::resource('/categories', CategoryController::class);
 
@@ -43,7 +48,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('showCar', [PageControllers::class, 'showCar'])->name('showCar');
 
     // Route::get('/users', [UserController::class, 'showAllUser'])->name('users.index');
+
     
+    Route::post('/commande/store', [CommandeController::class, 'store'])->name('commande.store');
+
+
+    Route::get('/users', [UserController::class, 'showAllUser'])->name('users.index');
+
     Route::resource('users', AuthentificateController::class);
 });
 

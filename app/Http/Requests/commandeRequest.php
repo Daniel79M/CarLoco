@@ -22,13 +22,9 @@ class commandeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'mode_paiement_id' => 'integer',
-            'couleur' => 'string',
-            'car_id'=> 'integer',
-            'numeroCommande' => 'integer',
-            'user_id' => 'integer',
-
-
+            'mode_paiement_id' => 'required|exists:mode_paiments,id',
+            'car_id' => 'required|exists:cars,id',
+            'couleur' => 'required|string',
         ];
     }
 
@@ -36,6 +32,13 @@ class commandeRequest extends FormRequest
 
     public function messages()
     {
-        
+        return [
+            // Ajoutez ici les messages personnalisés pour chaque règle de validation, si nécessaire
+            'mode_paiement_id.required' => 'Le mode de paiement est requis.',
+            'car_id.required' => 'La voiture est requise pour la commande.',
+            'couleur.required' => 'La couleur est obligatoire.',
+        ];
     }
+
+
 }
