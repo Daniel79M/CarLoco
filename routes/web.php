@@ -4,6 +4,7 @@ use App\Http\Controllers\CarController;
 use App\Http\Controllers\AuthentificateController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommandeController;
+use App\Http\Controllers\PageControllers;
 use App\Http\Controllers\UserController;
 use App\Models\Car;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/about', function () {
         return view('about');
     })->name('about');
+
+    Route::get('showCar', [PageControllers::class, 'showCar'])->name('showCar');
 
     // Route::get('/users', [UserController::class, 'showAllUser'])->name('users.index');
     

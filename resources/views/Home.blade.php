@@ -41,7 +41,7 @@
 
                     <p>Votre partenaire de confiance pour la vente et la location de voitures et d'engins.</p>
                     <p>Carloco est une entreprise innovante spécialisée dans la vente et la location de voitures. Notre mission est de simplifier et moderniser votre expérience en ligne grâce à une plateforme intuitive qui vous offre un large choix de véhicules adaptés à vos besoins. Profitez de fonctionnalités avancées telles que des recommandations personnalisées et des visites virtuelles pour faciliter votre sélection. Chez CarLoco, nous mettons un point d'honneur à vous fournir un service fiable et de qualité pour que votre parcours soit simple, sécurisé et satisfaisant..</p>
-                    <p><a href="#" class="btn btn-info py-3 px-4">Search Vehicle</a></p>
+                    <p><a href="{{ route('showCar') }}" class="btn btn-info py-3 px-4">Search Vehicle</a></p>
                 </div>
             </div>
         </div>
@@ -208,8 +208,8 @@
     <!-- Formulaire de filtrage ici -->
 
 <!-- Affichage des Résultats -->
-<<<<<<< HEAD
-<div class="container my-5">
+
+{{-- <div class="container my-5">
     <h3 class="text-center mb-4">Résultats de la recherche</h3>
     @if($voitures->isEmpty())
         <p class="text-center">Aucune voiture ne correspond à votre recherche.</p>
@@ -233,13 +233,9 @@
             @endforeach
         </div>
     @endif
-</div>
-=======
- <div class="container my-5">
-    <h3 class="text-center mb-4">Résultats de la recherche</h3>
+</div> --}}
 
-</div> 
->>>>>>> 47f3b05998f8a18dbed2bb86be5284fede09cb8e
+
 
     <!-- Formulaire de Filtrage des Voitures -->
 
@@ -253,22 +249,13 @@
                 <div class="col-md-3 mb-3 text-center">
                     <label for="categorie" class="form-label">Catégorie</label><br />
                     <input type="text" name="categorie" id="marque" class="form-control" placeholder="votre choix">
-                    {{-- <select name="categorie" id="categorie" class="form-select">
-                        <option value="">Toutes les catégories</option>
-                        <option value="">Toutes les catégories</option>
-                        <!-- Remplir dynamiquement avec les options des catégories -->
-                    </select> --}}
                 </div>
 
                 <!-- Champ de Filtrage par Marque -->
                 <div class="col-md-3 mb-3 text-center">
                     <label for="marque" class="form-label">Marque</label><br />
                     <input type="text" name="marque" id="marque" class="form-control" placeholder="votre choix">
-                    {{-- <select name="marque" id="marque" class="form-select">
-                        <option value="">Toutes les marques</option>
-                        <option value="">Toutes les marques</option>
-                        <!-- Remplir dynamiquement avec les options des marques -->
-                    </select> --}}
+                    
                 </div>
             </div>
             <div class="row">
@@ -276,22 +263,12 @@
                 <div class="col-md-3 mb-3 text-center">
                     <label for="annee" class="form-label">Année</label><br />
                     <input type="text" name="annee" id="marque" class="form-control" placeholder="votre choix">
-                    {{-- <select name="annee" id="annee" class="form-select">
-                        <option value="">Toutes les années</option>
-                        <option value="">Toutes les années</option>
-                        <!-- Remplir dynamiquement avec les options des années -->
-                    </select> --}}
                 </div>
 
                 <!-- Champ de Filtrage par Modèle -->
                 <div class="col-md-3 mb-3 text-center">
                     <label for="modele" class="form-label">Modèle</label><br />
                     <input type="text" name="modele" id="marque" class="form-control" placeholder="votre choix">
-                    {{-- <select name="modele" id="modele" class="form-select">
-                        <option value="">Tous les modèles</option>
-                        <option value="">Tous les modèles</option>
-                        <!-- Remplir dynamiquement avec les options des modèles -->
-                    </select> --}}
                 </div>
             </div>
 
