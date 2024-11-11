@@ -18,11 +18,8 @@
             <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
                 <div class="col-lg-8 ftco-animate">
                     <div class="text w-100 text-center mb-md-5 pb-md-5">
-                        <h1 class="mb-4">Fast &amp; Easy Way To Rent A Car</h1>
-                        <p style="font-size: 18px;">A small river named Duden flows by their place and supplies it
-                            with
-                            the
-                            necessary regelialia. It is a paradisematic country, in which roasted parts</p>
+                        <h1 class="mb-4">Avec CarLoco, accéder à une voiture n’a jamais été aussi simple.</h1>
+                        <p style="font-size: 18px;">Tout comme le voyageur qui prépare sa monture pour traverser de vastes contrées, équipez-vous de la voiture ou de l'engin parfait pour votre prochaine aventure.</p>
                     </div>
                 </div>
             </div>
@@ -38,21 +35,12 @@
                 style="background-image: url(images/about.jpg);">
             </div>
             <div class="col-md-6 wrap-about ftco-animate">
-                <div class="heading-section heading-section-white pl-md-5">
-                    <span class="subheading">About us</span>
-                    <h2 class="mb-4">Welcome to Carbook</h2>
+                <div class="heading-section heading-section-white pl-md-5"><br>
+                    <span class="subheading">A propos</span>
+                    <h2 class="mb-4">Bienvenue chez Carloco</h2>
 
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                        It
-                        is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-                        would have been rewritten a thousand times and everything that was left from its origin
-                        would be
-                        the word "and" and the Little Blind Text should turn around and return to its own, safe
-                        country.
-                        A small river named Duden flows by their place and supplies it with the necessary
-                        regelialia. It
-                        is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p>Votre partenaire de confiance pour la vente et la location de voitures et d'engins.</p>
+                    <p>Carloco est une entreprise innovante spécialisée dans la vente et la location de voitures. Notre mission est de simplifier et moderniser votre expérience en ligne grâce à une plateforme intuitive qui vous offre un large choix de véhicules adaptés à vos besoins. Profitez de fonctionnalités avancées telles que des recommandations personnalisées et des visites virtuelles pour faciliter votre sélection. Chez CarLoco, nous mettons un point d'honneur à vous fournir un service fiable et de qualité pour que votre parcours soit simple, sécurisé et satisfaisant..</p>
                     <p><a href="#" class="btn btn-info py-3 px-4">Search Vehicle</a></p>
                 </div>
             </div>
@@ -83,12 +71,13 @@
                             </div>
                             <h3 class="types_text">{{ $car->marque }}</h3>
                             <p class="looking_text"><strong>Prix :</strong> {{ number_format($car->price, 2) }}FCFA</p>
-                            {{-- <p class="looking_text">Start per day $4500</p> --}}
                             <p><strong>Modèle :</strong> {{ $car->model }} | <strong>Année :</strong>
                                 {{ $car->year }}</p>
                             <p class="d-flex mb-0 d-block">
-                                <a href="#" class="btn btn-info py-2 mr-1"> Acheter</a> 
-                                <a href="{{ route('cars.show', $car->id) }}"class="btn btn-secondary py-2 ml-1">Voir +</a></p>
+                                <a href="#" class="btn btn-info py-2 mr-1"> Acheter</a>
+                                <a href="{{ route('cars.show', $car->id) }}"class="btn btn-secondary py-2 ml-1">Voir
+                                    +</a>
+                            </p>
                             {{-- <div class="read_bt"><a href="{{ route('cars.show', $car->id) }}" class="btn btn-info">Voir Détails</a></div> --}}
                         </div>
                     </div>
@@ -104,17 +93,17 @@
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 text-center heading-section ftco-animate">
                 <span class="subheading">Services</span>
-                <h2 class="mb-3">Our Latest Services</h2>
+                <h2 class="mb-3">Nos derniers services</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3">
                 <div class="services services-2 w-100 text-center">
                     <div class="icon d-flex align-items-center justify-content-center"><span
-                            class="flaticon-wedding-car"></span></div>
+                            class="fa fa-truck" aria-hidden="true"></span></div>
                     <div class="text w-100">
-                        <h3 class="heading mb-2">Wedding Ceremony</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        <h3 class="heading mb-2">Cérémonies de mariages</h3>
+                        <p>Notre service client dévoué est là pour vous accompagner à chaque étape de votre aventure.
                         </p>
                     </div>
                 </div>
@@ -122,10 +111,10 @@
             <div class="col-md-3">
                 <div class="services services-2 w-100 text-center">
                     <div class="icon d-flex align-items-center justify-content-center"><span
-                            class="flaticon-transportation"></span></div>
+                            class="fa fa-taxi" aria-hidden="true"></span></div>
                     <div class="text w-100">
-                        <h3 class="heading mb-2">City Transfer</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        <h3 class="heading mb-2">Transport ville</h3>
+                        <p>Notre service client dévoué est là pour vous accompagner à chaque étape de votre aventure.
                         </p>
                     </div>
                 </div>
@@ -133,10 +122,10 @@
             <div class="col-md-3">
                 <div class="services services-2 w-100 text-center">
                     <div class="icon d-flex align-items-center justify-content-center"><span
-                            class="flaticon-car"></span></div>
+                            class="fa fa-car" aria-hidden="true"></span></div>
                     <div class="text w-100">
-                        <h3 class="heading mb-2">Airport Transfer</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        <h3 class="heading mb-2">Transport depuis l'aeroport</h3>
+                        <p>Notre service client dévoué est là pour vous accompagner à chaque étape de votre aventure.
                         </p>
                     </div>
                 </div>
@@ -144,16 +133,148 @@
             <div class="col-md-3">
                 <div class="services services-2 w-100 text-center">
                     <div class="icon d-flex align-items-center justify-content-center"><span
-                            class="flaticon-transportation"></span></div>
+                            class="fa fa-bus" aria-hidden="true"></span></div>
                     <div class="text w-100">
-                        <h3 class="heading mb-2">Whole City Tour</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        <h3 class="heading mb-2">Visite de la ville entière</h3>
+                        <p>Notre service client dévoué est là pour vous accompagner à chaque étape de votre aventure.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Blog</span>
+                <h2>Recent Blog</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                    </a>
+                    <div class="text pt-4">
+                        <div class="meta mb-3">
+                            <div><a href="#">Oct. 29, 2019</a></div>
+                            <div><a href="#">Admin</a></div>
+                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a>
+                        </h3>
+                        <p><a href="#" class="btn btn-primary">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+                    </a>
+                    <div class="text pt-4">
+                        <div class="meta mb-3">
+                            <div><a href="#">Oct. 29, 2019</a></div>
+                            <div><a href="#">Admin</a></div>
+                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a>
+                        </h3>
+                        <p><a href="#" class="btn btn-primary">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+                    </a>
+                    <div class="text pt-4">
+                        <div class="meta mb-3">
+                            <div><a href="#">Oct. 29, 2019</a></div>
+                            <div><a href="#">Admin</a></div>
+                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a>
+                        </h3>
+                        <p><a href="#" class="btn btn-primary">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulaire de filtrage ici -->
+
+<!-- Affichage des Résultats -->
+ <div class="container my-5">
+    <h3 class="text-center mb-4">Résultats de la recherche</h3>
+
+</div> 
+
+    <!-- Formulaire de Filtrage des Voitures -->
+
+
+<div class="container my-5">
+    <div class="card p-4 shadow-sm">
+        <h3 class="text-center mb-4">Rechercher une voiture</h3>
+        <form action="{{ route('search') }}" method="GET">
+            <div class="row">
+                <!-- Champ de Filtrage par Catégorie -->
+                <div class="col-md-3 mb-3 text-center">
+                    <label for="categorie" class="form-label">Catégorie</label><br />
+                    <input type="text" name="categorie" id="marque" class="form-control" placeholder="votre choix">
+                    {{-- <select name="categorie" id="categorie" class="form-select">
+                        <option value="">Toutes les catégories</option>
+                        <option value="">Toutes les catégories</option>
+                        <!-- Remplir dynamiquement avec les options des catégories -->
+                    </select> --}}
+                </div>
+
+                <!-- Champ de Filtrage par Marque -->
+                <div class="col-md-3 mb-3 text-center">
+                    <label for="marque" class="form-label">Marque</label><br />
+                    <input type="text" name="marque" id="marque" class="form-control" placeholder="votre choix">
+                    {{-- <select name="marque" id="marque" class="form-select">
+                        <option value="">Toutes les marques</option>
+                        <option value="">Toutes les marques</option>
+                        <!-- Remplir dynamiquement avec les options des marques -->
+                    </select> --}}
+                </div>
+            </div>
+            <div class="row">
+                <!-- Champ de Filtrage par Année -->
+                <div class="col-md-3 mb-3 text-center">
+                    <label for="annee" class="form-label">Année</label><br />
+                    <input type="text" name="annee" id="marque" class="form-control" placeholder="votre choix">
+                    {{-- <select name="annee" id="annee" class="form-select">
+                        <option value="">Toutes les années</option>
+                        <option value="">Toutes les années</option>
+                        <!-- Remplir dynamiquement avec les options des années -->
+                    </select> --}}
+                </div>
+
+                <!-- Champ de Filtrage par Modèle -->
+                <div class="col-md-3 mb-3 text-center">
+                    <label for="modele" class="form-label">Modèle</label><br />
+                    <input type="text" name="modele" id="marque" class="form-control" placeholder="votre choix">
+                    {{-- <select name="modele" id="modele" class="form-select">
+                        <option value="">Tous les modèles</option>
+                        <option value="">Tous les modèles</option>
+                        <!-- Remplir dynamiquement avec les options des modèles -->
+                    </select> --}}
+                </div>
+            </div>
+
+            <!-- Bouton de Recherche -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-3">Rechercher</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 </section>
 
 

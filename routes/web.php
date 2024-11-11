@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\AuthentificateController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\UserController;
 use App\Models\Car;
@@ -24,13 +25,27 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('logout', [AuthentificateController::class, 'logout'])->name('logout');
 
+    Route::get('search', [AuthentificateController::class, 'search'])->name('search');
+
     Route::get('Welcome', [AuthentificateController::class, 'home'])->name('Welcome');
 
     Route::resource('cars', CarController::class);
 
+
     // Route::resource('commande', CommandeController::class;
 
     Route::get('/commande/create/{id}', [CommandeController::class, 'create'])->name('commande.create');
+
+    Route::resource('/categories', CategoryController::class);
+
+    Route::resource('/commandes', controller: CommandeController::class);
+
+    Route::get('/about', function () {
+        return view('about');
+    })->name('about');
+
+    // Route::get('/users', [UserController::class, 'showAllUser'])->name('users.index');
+
     
     Route::post('/commande/store', [CommandeController::class, 'store'])->name('commande.store');
 

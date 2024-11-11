@@ -1,9 +1,9 @@
 @extends('layout.base')
 
 @if (Auth::user()->is_admin === 1)
-@include('components.AdminNavBar')
+    @include('components.AdminNavBar')
 @elseif(Auth::user()->is_admin === 'false')
-@include('Components.Nav_bar')
+    @include('Components.Nav_bar')
 @endif
 
 {{-- <br /><br /><br /> --}}
@@ -14,8 +14,8 @@
             <div class="car-detail">
                 <div class="car-imagesDe">
                     @foreach ($car->images as $image)
-                    <img src="{{ asset('storage/' . $image->image_path) }}" alt="Image de {{ $car->title }}"
-                    class="car-image">
+                        <img src="{{ asset('storage/' . $image->image_path) }}" alt="Image de {{ $car->title }}"
+                            class="car-image">
                     @endforeach
                 </div>
                 <div class="car-infoDe">
@@ -30,6 +30,7 @@
                     </div>
 
 
+
                     <a href="{{ route('commande.create', ['id' => $car->id]) }}" class="btn btn-primary">Commander cette voiture</a>
 
                     {{-- <p class="d-flex mb-0 d-block"><a href="{{ route('commandes.create') }}" class="btn btn-secondary py-2 mr-1">
@@ -37,6 +38,12 @@
                          {{-- <a href="{{ route('cars.show', $car->id) }}"
                         class="btn btn-info py-2 ml-1"></a> --}}
                 {{-- </p> --}}
+
+                    <p class="d-flex mb-0 d-block">
+                        <a href="{{ route('cars.destroy', $car->id) }}" method="DELETE" class="btn btn-secondary py-2 mr-1">
+                            Supprimer
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -44,4 +51,3 @@
     </section>
 </div>
 @include('Components.Footer')
-

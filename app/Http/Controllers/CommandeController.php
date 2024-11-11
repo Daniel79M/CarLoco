@@ -13,27 +13,44 @@ class CommandeController extends Controller
 {
     /**
      * Display a listing of the resource.
-     */
-    public function index()
-    {
-        if(Auth::user()->is_admin = true){
-            $commandes = Commande::all();
-            return view('Commande.list', [
-                'commandes' => $commandes
-            ]);
-        }else{
-            $commandes = Commande::where('user_id', '=', Auth::user()->id);
-            return view('Commande.list', [
-                'commandes' => $commandes
-            ]);
-        }
-    }
+     */ 
+public function index()
+{
+    // Définir des données statiques pour les commandes
+    $commandes = collect([
+        (object) [
+            'id' => 1,
+            'numeroCommande' => '12345678',
+            'couleur' => 'Rouge',
+            'modePaiement' => (object) ['name' => 'Carte bancaire'],
+        ],
+        (object) [
+            'id' => 2,
+            'numeroCommande' => '23456789',
+            'couleur' => 'Bleu',
+            'modePaiement' => (object) ['name' => 'PayPal'],
+        ],
+        (object) [
+            'id' => 3,
+            'numeroCommande' => '34567890',
+            'couleur' => 'Noir',
+            'modePaiement' => (object) ['name' => 'Espèces'],
+        ]
+    ]);
+
+    return view('Commande.list', [
+        'commandes' => $commandes
+    ]);
+}
+
+
 
     /**
      * Show the form for creating a new resource.
      */
     public function create(string $id)
     {
+
         $mode_paiements = ModePaiment::all();
         $car = Car::findOrFail($id);
         return view('Commande.create',[

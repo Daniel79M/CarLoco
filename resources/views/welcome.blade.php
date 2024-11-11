@@ -14,11 +14,8 @@
             <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
                 <div class="col-lg-8 ftco-animate">
                     <div class="text w-100 text-center mb-md-5 pb-md-5">
-                        <h1 class="mb-4">Fast &amp; Easy Way To Rent A Car</h1>
-                        <p style="font-size: 18px;">A small river named Duden flows by their place and supplies it
-                            with
-                            the
-                            necessary regelialia. It is a paradisematic country, in which roasted parts</p>
+                        <h1 class="mb-4">Avec Carloco, accéder à une voiture n’a jamais été aussi simple.</h1>
+                        <p style="font-size: 18px;">Tout comme le voyageur qui prépare sa monture pour traverser de vastes contrées, équipez-vous de la voiture ou de l'engin parfait pour votre prochaine aventure.</p>
                     </div>
                 </div>
             </div>
@@ -34,22 +31,13 @@
                 style="background-image: url(images/about.jpg);">
             </div>
             <div class="col-md-6 wrap-about ftco-animate">
-                <div class="heading-section heading-section-white pl-md-5">
-                    <span class="subheading">About us</span>
-                    <h2 class="mb-4">Welcome to Carbook</h2>
+                <div class="heading-section heading-section-white pl-md-5"><br>
+                    <span class="subheading">A propos</span>
+                    <h2 class="mb-4">Bienvenue chez Carloco</h2>
 
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                        It
-                        is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-                        would have been rewritten a thousand times and everything that was left from its origin
-                        would be
-                        the word "and" and the Little Blind Text should turn around and return to its own, safe
-                        country.
-                        A small river named Duden flows by their place and supplies it with the necessary
-                        regelialia. It
-                        is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                    <p><a href="#" class="btn btn-primary py-3 px-4">Search Vehicle</a></p>
+                    <p>Votre partenaire de confiance pour la vente et la location de voitures et d'engins.</p>
+                    <p>Carloco est une entreprise innovante spécialisée dans la vente et la location de voitures. Notre mission est de simplifier et moderniser votre expérience en ligne grâce à une plateforme intuitive qui vous offre un large choix de véhicules adaptés à vos besoins. Profitez de fonctionnalités avancées telles que des recommandations personnalisées et des visites virtuelles pour faciliter votre sélection. Chez CarLoco, nous mettons un point d'honneur à vous fournir un service fiable et de qualité pour que votre parcours soit simple, sécurisé et satisfaisant..</p>
+                    <p><a href="#" class="btn btn-primary py-3 px-4">Recherche de Véhicle</a></p>
                 </div>
             </div>
         </div>
@@ -101,17 +89,17 @@
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 text-center heading-section ftco-animate">
                 <span class="subheading">Services</span>
-                <h2 class="mb-3">Our Latest Services</h2>
+                <h2 class="mb-3">Nos derniers Services</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3">
                 <div class="services services-2 w-100 text-center">
                     <div class="icon d-flex align-items-center justify-content-center"><span
-                            class="flaticon-wedding-car"></span></div>
+                            class="fa fa-truck" aria-hidden="true"></span></div>
                     <div class="text w-100">
-                        <h3 class="heading mb-2">Wedding Ceremony</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        <h3 class="heading mb-2">Cérémonies de mariages</h3>
+                        <p>Notre service client dévoué est là pour vous accompagner à chaque étape de votre aventure.
                         </p>
                     </div>
                 </div>
@@ -119,10 +107,10 @@
             <div class="col-md-3">
                 <div class="services services-2 w-100 text-center">
                     <div class="icon d-flex align-items-center justify-content-center"><span
-                            class="flaticon-transportation"></span></div>
+                            class="fa fa-taxi" aria-hidden="true"></span></div>
                     <div class="text w-100">
-                        <h3 class="heading mb-2">City Transfer</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        <h3 class="heading mb-2">Transport ville</h3>
+                        <p>Notre service client dévoué est là pour vous accompagner à chaque étape de votre aventure.".
                         </p>
                     </div>
                 </div>
@@ -130,10 +118,10 @@
             <div class="col-md-3">
                 <div class="services services-2 w-100 text-center">
                     <div class="icon d-flex align-items-center justify-content-center"><span
-                            class="flaticon-car"></span></div>
+                            class="fa fa-car" aria-hidden="true"></span></div>
                     <div class="text w-100">
-                        <h3 class="heading mb-2">Airport Transfer</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        <h3 class="heading mb-2">Transport depuis l'aeroport</h3>
+                        <p>Notre service client dévoué est là pour vous accompagner à chaque étape de votre aventure.
                         </p>
                     </div>
                 </div>
@@ -141,10 +129,10 @@
             <div class="col-md-3">
                 <div class="services services-2 w-100 text-center">
                     <div class="icon d-flex align-items-center justify-content-center"><span
-                            class="flaticon-transportation"></span></div>
+                            class="fa fa-bus" aria-hidden="true"></span></div>
                     <div class="text w-100">
-                        <h3 class="heading mb-2">Whole City Tour</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        <h3 class="heading mb-2">Visite de la ville entière</h3>
+                        <p>Notre service client dévoué est là pour vous accompagner à chaque étape de votre aventure.
                         </p>
                     </div>
                 </div>
