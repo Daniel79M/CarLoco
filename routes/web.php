@@ -33,7 +33,11 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/categories', CategoryController::class);
 
-    Route::resource('commandes', CommandeController::class);
+    Route::resource('/commandes', controller: CommandeController::class);
+
+    Route::get('/about', function () {
+        return view('about');
+    })->name('about');
 
     // Route::get('/users', [UserController::class, 'showAllUser'])->name('users.index');
     

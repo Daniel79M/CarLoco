@@ -79,16 +79,61 @@ class CarController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
+/**
+ * Update the specified resource in storage.
+ */
+public function update(Request $request, string $id)
+{
+    // Valider les données du formulaire
+    $request->validate([
+        'marque' => 'string|max:50',
+        'description' => 'string',
+        'price' => 'numeric',
+        'model' => 'string',
+        'make' => 'string',
+        'year' => 'integer',
+        'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+    ]);
+
+    // Trouver la voiture par son ID
+    $car = Car::findOrFail($id);
+
+    // Mettre à jour les informations de la voiture
+    $car->update($request->only('marque', 'description', 'price', 'model', 'make', 'year'));
+
+    // Si des images sont envoyées, les traiter
+    if ($request->hasFile('images')) {
+        foreach ($request->file('images') as $image) {
+            $path = $image->store('car_images', 'public');
+            CarImage::create([
+                'car_id' => $car->id,
+                'image_path' => $path,
+            ]);
+        }
     }
+
+    return redirect()->route('Welcome')->with('success', 'Voiture mise à jour avec succès!');
+}
+
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
-    }
+/**
+ * Remove the specified resource from storage.
+ */
+public function destroy(string $id)
+{
+    $car = Car::findOrFail($id);
+
+    // Supprimer les images associées à la voiture
+
+
+    // Supprimer la voiture de la base de données
+    $car->delete();
+
+    // Rediriger vers la page d'accueil avec un message de succès
+    return redirect()->route('Welcome')->with('success', 'Voiture supprimée avec succès!');
+}
+
 }
