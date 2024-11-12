@@ -22,11 +22,21 @@ Route::post('login', [AuthentificateController::class, 'login']);
 Route::post('singIn', [AuthentificateController::class, 'register']);
 
 
+
+
+
 Route::middleware(['auth'])->group(function () {
 
-    Route::post('logout', [AuthentificateController::class, 'logout'])->name('logout');
+    Route::get('/about', function () {
+        return view('about');
+    })->name('about');
 
     Route::get('search', [AuthentificateController::class, 'search'])->name('search');
+    
+    Route::get('showCar', [PageControllers::class, 'showCar'])->name('showCar');
+    
+    Route::post('logout', [AuthentificateController::class, 'logout'])->name('logout');
+
 
     Route::get('Welcome', [AuthentificateController::class, 'home'])->name('Welcome');
 
@@ -41,14 +51,12 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/commandes', controller: CommandeController::class);
 
-    Route::get('/about', function () {
-        return view('about');
-    })->name('about');
-
     Route::get('showCar', [PageControllers::class, 'showCar'])->name('showCar');
 
+    Route::get('blogPage', [PageControllers::class, 'blogPage'])->name('blogPage');
+    
     // Route::get('/users', [UserController::class, 'showAllUser'])->name('users.index');
-
+    Route::get('/commande/{id}/validate', [PageControllers::class, 'validateOrder'])->name('orders.validate');
     
     Route::post('/commande/store', [CommandeController::class, 'store'])->name('commande.store');
 

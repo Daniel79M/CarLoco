@@ -8,7 +8,7 @@
 @endif
 <br /><br /><br />
 
-{{-- <div class="container my-5">
+<div class="container my-5">
     <h3 class="text-center mb-4">Résultats de la recherche</h3>
     @if($voitures->isEmpty())
         <p class="text-center">Aucune voiture ne correspond à votre recherche.</p>
@@ -18,7 +18,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
                         <img src="{{ asset('storage/' . $voiture->images->first()) }}"
-                                        alt="Image de " class="car-thumbnail">
+                            alt="Image de " class="car-thumbnail">
                         <div class="card-body">
                             <h5 class="card-title">{{ $voiture->model }} - {{ $voiture->marque }}</h5>
                             <p class="card-text">
@@ -32,7 +32,8 @@
             @endforeach
         </div>
     @endif
-</div> --}}
+</div>
+
     <!-- Formulaire de Filtrage des Voitures -->
 
 <div class="container my-5">
@@ -41,10 +42,10 @@
         <form action="{{ route('search') }}" method="GET">
             <div class="row">
                 <!-- Champ de Filtrage par Catégorie -->
-                {{-- <div class="col-md-3 mb-3 text-center">
-                    <label for="categorie" class="form-label">Catégorie</label><br />
-                    <input type="text" name="categorie" id="marque" class="form-control" placeholder="votre choix">
-                </div> --}}
+                <div class="col-md-3 mb-3 text-center">
+                    <label for="price" class="form-label">Prix</label><br />
+                    <input type="text" name="price" id="price" class="form-control" placeholder="votre choix">
+                </div>
 
                 <!-- Champ de Filtrage par Marque -->
                 <div class="col-md-3 mb-3 text-center">
@@ -57,13 +58,13 @@
                 <!-- Champ de Filtrage par Année -->
                 <div class="col-md-3 mb-3 text-center">
                     <label for="annee" class="form-label">Année</label><br />
-                    <input type="text" name="annee" id="année" class="form-control" placeholder="votre choix">
+                    <input type="text" name="annee" id="marque" class="form-control" placeholder="votre choix">
                 </div>
 
                 <!-- Champ de Filtrage par Modèle -->
                 <div class="col-md-3 mb-3 text-center">
                     <label for="modele" class="form-label">Modèle</label><br />
-                    <input type="text" name="modele" id="model" class="form-control" placeholder="votre choix">
+                    <input type="text" name="modele" id="marque" class="form-control" placeholder="votre choix">
                 </div>
             </div>
 

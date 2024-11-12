@@ -11,11 +11,10 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="{{ route('Welcome') }}" class="nav-link">Accueil</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">A propos</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                {{-- <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li> --}}
-                <li class="nav-item"><a href="" class="nav-link">Voitures</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">A propos</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="{{ route('showCar') }}" class="nav-link">Voitures</a></li>
+                <li class="nav-item"><a href="{{ route('blogPage') }}" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="" class="nav-link">Contact</a></li>&nbsp;&nbsp;
                 <li class="nav-item subscribe_bt1">
                     <form action="{{ route('logout') }}" method="POST" class="nav-link">

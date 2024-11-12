@@ -1,15 +1,11 @@
 @extends('layout.base')
 
-
-
 <div>
     @if (Auth::user()->is_admin === 1)
         @include('components.AdminNavBar')
     @elseif(Auth::user()->is_admin === 'false')
         @include('Components.Nav_bar')
     @endif
-    {{-- @include('Components.Nav_bar') --}}
-
 
     <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');"
         data-stellar-background-ratio="0.5">
@@ -74,7 +70,7 @@
                             <p><strong>Modèle :</strong> {{ $car->model }} | <strong>Année :</strong>
                                 {{ $car->year }}</p>
                             <p class="d-flex mb-0 d-block">
-                                <a href="#" class="btn btn-info py-2 mr-1"> Acheter</a>
+                                <a href="{{ route('commande.create', ['id' => $car->id]) }}" class="btn btn-info py-2 mr-1"> Acheter</a>
                                 <a href="{{ route('cars.show', $car->id) }}"class="btn btn-secondary py-2 ml-1">Voir
                                     +</a>
                             </p>
@@ -218,7 +214,7 @@
             @foreach($voitures as $voiture)
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
-                        <img src="{{ asset('storage/' . $voiture->images->first()->image_path) }}"
+                        <img src="{{ asset('storage/' . $car->images->first()->image_path) }}"
                                         alt="Image de {{ $car->title }}" class="car-thumbnail">
                         <div class="card-body">
                             <h5 class="card-title">{{ $voiture->model }} - {{ $voiture->marque }}</h5>
@@ -234,12 +230,8 @@
         </div>
     @endif
 </div> --}}
-
-
-
     <!-- Formulaire de Filtrage des Voitures -->
-
-
+{{-- 
 <div class="container my-5">
     <div class="card p-4 shadow-sm">
         <h3 class="text-center mb-4">Rechercher une voiture</h3>
@@ -278,7 +270,7 @@
             </div>
         </form>
     </div>
-</div>
+</div> --}}
 
 </section>
 

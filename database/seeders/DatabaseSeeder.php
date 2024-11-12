@@ -23,9 +23,5 @@ class DatabaseSeeder extends Seeder
             'password' => 'test@',
             'is_admin' => true
         ]);
-
-
-
-
     }
 }

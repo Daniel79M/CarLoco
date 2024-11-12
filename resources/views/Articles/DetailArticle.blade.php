@@ -39,11 +39,11 @@
                         class="btn btn-info py-2 ml-1"></a> --}}
                 {{-- </p> --}}
 
-                    <p class="d-flex mb-0 d-block">
+                    {{-- <p class="d-flex mb-0 d-block">
                         <a href="{{ route('cars.destroy', $car->id) }}" method="DELETE" class="btn btn-secondary py-2 mr-1">
                             Supprimer
                         </a>
-                    </p>
+                    </p> --}}
                 </div>
             </div>
         </div>

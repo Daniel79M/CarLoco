@@ -70,7 +70,7 @@
                             {{-- <p class="looking_text">Start per day $4500</p> --}}
                             <p><strong>Modèle :</strong> {{ $car->model }} | <strong>Année :</strong>
                                 {{ $car->year }}</p>
-                            <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-info py-2 mr-1">
+                            <p class="d-flex mb-0 d-block"><a href="{{ route('commande.create', ['id' => $car->id]) }}" class="btn btn-info py-2 mr-1">
                                     Acheter</a> <a href="{{ route('cars.show', $car->id) }}"
                                     class="btn btn-secondary py-2 ml-1">Plus de Détail</a>
                             </p>
