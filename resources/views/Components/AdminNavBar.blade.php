@@ -11,10 +11,17 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <li class="nav-item active"><a href="index.html" class="nav-link">Accueil</a></li>
 =======
                 <li class="nav-item active"><a href="{{ route('Welcome') }}" class="nav-link">Home</a></li>
 >>>>>>> 21c55a658eef6e33bafcdab9333e89991d935ec9
+=======
+
+
+                <li class="nav-item active"><a href="{{ route('Welcome') }}" class="nav-link">Accueil</a></li>
+
+>>>>>>> e28ca95703a7e0b2f12b56ccd3288d952f341753
 
                 <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">A propos</a></li>
                 <li class="nav-item"><a href="{{ route('categories.index') }}" class="nav-link">Catégories</a></li>
