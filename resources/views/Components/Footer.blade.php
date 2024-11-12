@@ -12,7 +12,10 @@
             <div class="row">
                 <div class="col">
                     <h4 class="footer_taital"></h4>
-                    <p class="footer_text">There are many variations of passages of Lorem Ipsum available,</p>
+                    <p class="footer_text">Qui sommes-nous ?
+                        Nos offres d'emploi
+                        Devenir annonceur pub
+                        Devenir partenaire pro</p>
                     <div class="form-group">
                         <textarea class="update_mail" placeholder="Enter Your Email" rows="5" id="comment" name="Enter Your Email"></textarea>
                         <div class="subscribe_bt"><a href="#">Soumettre</a></div>
@@ -28,8 +31,10 @@
                 </div>
                 <div class="col">
                     <h4 class="footer_taital">Investissement</h4>
-                    <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the
-                        majority </p>
+                    <p class="lorem_text">Qui sommes-nous ?
+                        Nos offres d'emploi
+                        Devenir annonceur pub
+                        Devenir partenaire pro </p>
                 </div>
                 <div class="col">
                     <h4 class="footer_taital">Contacts</h4>

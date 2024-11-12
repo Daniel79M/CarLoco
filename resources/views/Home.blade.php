@@ -150,7 +150,7 @@
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
                 <span class="subheading">Blog</span>
-                <h2>Recent Blog</h2>
+                <h2>Les publications les plus recents</h2>
             </div>
         </div>
         <div class="row d-flex">
@@ -166,7 +166,7 @@
                         </div>
                         <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a>
                         </h3>
-                        <p><a href="#" class="btn btn-primary">Read more</a></p>
+                        <p><a href="#" class="btn btn-primary">Lire plus</a></p>
                     </div>
                 </div>
             </div>
@@ -180,9 +180,9 @@
                             <div><a href="#">Admin</a></div>
                             <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                         </div>
-                        <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a>
+                        <h3 class="heading mt-2"><a href="#">Comment faire l'assurance de ma voiture </a>
                         </h3>
-                        <p><a href="#" class="btn btn-primary">Read more</a></p>
+                        <p><a href="#" class="btn btn-primary">Lire plus</a></p>
                     </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@
                         </div>
                         <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a>
                         </h3>
-                        <p><a href="#" class="btn btn-primary">Read more</a></p>
+                        <p><a href="#" class="btn btn-primary">Lire plus</a></p>
                     </div>
                 </div>
             </div>

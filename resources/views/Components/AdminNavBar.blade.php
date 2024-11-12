@@ -10,12 +10,12 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="index.html" class="nav-link">Accueil</a></li>
 
-                <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="{{ route('categories.index') }}" class="nav-link">catégories</a></li>
+                <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">A propos</a></li>
+                <li class="nav-item"><a href="{{ route('categories.index') }}" class="nav-link">Catégories</a></li>
                 <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link">Utilisateurs</a></li>
-                <li class="nav-item"><a href="{{ route('commandes.index') }}" class="nav-link">Les Commande</a></li>
+                <li class="nav-item"><a href="{{ route('commandes.index') }}" class="nav-link">Les Commandes</a></li>
                 <li class="nav-item"><a href="{{ route('cars.create') }}" class="nav-link">Pubier</a></li>&nbsp;&nbsp;
                 <li class="nav-item subscribe_bt1">
                     <form action="{{ route('logout') }}" method="POST" class="nav-link">
@@ -29,4 +29,4 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> 

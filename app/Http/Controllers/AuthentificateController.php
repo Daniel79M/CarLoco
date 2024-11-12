@@ -24,13 +24,7 @@ class AuthentificateController extends Controller
 
     public function showLoginForm()
     {
-        // $commande = Commande::create( [
-        //     'mode_paiement_id' => 1,
-        //     'user_id' => 1,
-        //     'car_id' => 2,
-        //     'numeroCommande' => rand(11111111, 99999999),
-        //     'couleur' => 'blue',
-        // ]);
+        
         return view('Auth.Connexion');
         // return $commande;
     }
