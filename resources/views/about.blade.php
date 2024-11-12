@@ -1,9 +1,9 @@
 @extends('layout.base')
 
 @if (Auth::user()->is_admin === 1)
-    @include('components.AdminNavBar')
+@include('components.AdminNavBar')
 @elseif(Auth::user()->is_admin === 'false')
-    @include('Components.WelcomeNav_bar')
+@include('Components.Nav_bar')
 @endif
 
 <div class="about_section layout_padding">

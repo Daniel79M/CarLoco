@@ -3,7 +3,7 @@
 @if (Auth::user()->is_admin === 1)
 @include('components.AdminNavBar')
 @elseif(Auth::user()->is_admin === 'false')
-@include('Components.WelcomeNav_bar')
+@include('Components.Nav_bar')
 @endif
 
     <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');"

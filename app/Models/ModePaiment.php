@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class ModePaiment extends Model
 {
     protected $fillable = [
-        'type'
+        'type',
+        'description'
     ];
 
 

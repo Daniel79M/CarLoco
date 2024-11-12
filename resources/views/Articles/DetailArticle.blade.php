@@ -28,16 +28,22 @@
                         <p><strong>Description :</strong> {{ $car->description }}</p>
 
                     </div>
-                    <p class="d-flex mb-0 d-block">
-                        <a href="{{ route('commandes.create') }}" class="btn btn-secondary py-2 mr-1">
-                            Commander</a>
-                    </p>
 
-                    <p class="d-flex mb-0 d-block">
+
+
+                    <a href="{{ route('commande.create', ['id' => $car->id]) }}" class="btn btn-primary">Commander cette voiture</a>
+
+                    {{-- <p class="d-flex mb-0 d-block"><a href="{{ route('commandes.create') }}" class="btn btn-secondary py-2 mr-1">
+                        Commander</a> --}}
+                         {{-- <a href="{{ route('cars.show', $car->id) }}"
+                        class="btn btn-info py-2 ml-1"></a> --}}
+                {{-- </p> --}}
+
+                    {{-- <p class="d-flex mb-0 d-block">
                         <a href="{{ route('cars.destroy', $car->id) }}" method="DELETE" class="btn btn-secondary py-2 mr-1">
                             Supprimer
                         </a>
-                    </p>
+                    </p> --}}
                 </div>
             </div>
         </div>
