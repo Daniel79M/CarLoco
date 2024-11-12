@@ -15,7 +15,7 @@
                     {{-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
                                     class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i
                                 class="ion-ios-arrow-forward"></i></span></p> --}}
-                    <h1 class="mb-3 bread">Our Blog</h1>
+                    <h1 class="mb-3 bread">Notre Blog</h1>
                 </div>
             </div>
         </div>
@@ -35,11 +35,9 @@
                                 <div><a href="#">Admin</a></div>
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
-                            <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business
-                                    Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                                your mouth.</p>
+                            <h3 class="heading mt-2"><a href="#">Que faut-il savoir pour conduire une voiture.
+                                    </a></h3>
+                            <p>Vous vous êtes déjà demandé que faut-il pour conduire une voiture sans permis ? Pas de panique, on est là pour vous éclairer ! Ces voitures constituent une alternative intéressante pour ceux qui ne possèdent pas le précieux sésame. Faisons le point sur ce qu'est ce type de véhicule, qui peut la conduire et les papiers indispensables à avoir sous la main. Accrochez-vous, c'est parti pour tout savoir sur les voitures sans permis !</p>
                             <p><a href="blog-single.html" class="btn btn-primary">Continue <span
                                         class="icon-long-arrow-right"></span></a></p>
                         </div>
@@ -56,11 +54,8 @@
                                 <div><a href="#">Admin</a></div>
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
-                            <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business
-                                    Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                                your mouth.</p>
+                            <h3 class="heading mt-2"><a href="#">Quand faire le premier contrôle technique de votre véhicule</a></h3>
+                            <p>Le contrôle technique, c’est un passage obligé pour tous les véhicules, et pour de bonnes raisons : le professionnel s’assure que votre voiture respecte les normes en vigueur. Que vous soyez déjà propriétaire ou que vous pensiez vendre votre véhicule, il est important de bien connaître les règles qui encadrent ce contrôle et ce que la loi exige. Faisons le point sur la question de quand faire le premier contrôle technique, les règles à suivre et les délais à respecter avec ce guide complet.</p>
                             <p><a href="blog-single.html" class="btn btn-primary">Continue <span
                                         class="icon-long-arrow-right"></span></a></p>
                         </div>
@@ -77,8 +72,7 @@
                                 <div><a href="#">Admin</a></div>
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
-                            <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business
-                                    Growth</a></h3>
+                            <h3 class="heading mt-2"><a href="#">Carte grise pour la vente d'un voiture.</a></h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
                                 your mouth.</p>
@@ -140,11 +134,8 @@
                                 <div><a href="#">Admin</a></div>
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
-                            <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business
-                                    Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                                your mouth.</p>
+                            <h3 class="heading mt-2"><a href="#">Que faire en cas de panne sèche</a></h3>
+                            <p>Il est impératif de vous mettre en sécurité et de chercher de l'aide.</p>
                             <p><a href="blog-single.html" class="btn btn-primary">Continue <span
                                         class="icon-long-arrow-right"></span></a></p>
                         </div>
