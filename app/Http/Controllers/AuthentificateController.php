@@ -106,34 +106,10 @@ class AuthentificateController extends Controller
     {
 
 
-        // $voitures = Car::query();
-
-        // // $cars = Car::with('images')->get();
-    
-        // if ($request->filled('categorie')) {
-        //     $voitures->where('categorie', $request->categorie);
-        // }
-    
-        // if ($request->filled('marque')) {
-        //     $voitures->where('marque', $request->marque);
-        // }
-    
-        // if ($request->filled('annee')) {
-        //     $voitures->where('annee', $request->annee);
-        // }
-    
-        // if ($request->filled('modele')) {
-        //     $voitures->where('modele', $request->modele);
-        // }
-    
-        // $voitures = $voitures->get();
-    
-
         $cars = Car::with('images')->get();
 
         return view('Home', [
             'cars' => $cars,
-            // 'voitures' => $voitures,
         ]);
     }
 
@@ -152,25 +128,25 @@ class AuthentificateController extends Controller
 
         $cars = Car::with('images')->get();
     
-        if ($request->filled('categorie')) {
-            $voitures->where('categorie', $request->categorie);
+        if ($request->filled('price')) {
+            $voitures->where('price', $request->price);
         }
-    
+
         if ($request->filled('marque')) {
             $voitures->where('marque', $request->marque);
         }
-    
+
         if ($request->filled('annee')) {
-            $voitures->where('annee', $request->annee);
+            $voitures->where('year', $request->annee);
         }
-    
+
         if ($request->filled('modele')) {
-            $voitures->where('modele', $request->modele);
+            $voitures->where('model', $request->modele);
         }
-    
+
         $voitures = $voitures->get();
-    
-        return view('home', [
+
+        return view('cars.search', [
             'cars' => $cars,
             'voitures' => $voitures,
         ]);

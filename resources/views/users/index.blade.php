@@ -3,7 +3,7 @@
 @if (Auth::user()->is_admin === 1)
 @include('components.AdminNavBar')
 @elseif(Auth::user()->is_admin === 'false')
-@include('Components.WelcomeNav_bar')
+@include('Components.Nav_bar')
 @endif
 
 <div class="gallery_section layout_padding">
@@ -38,4 +38,5 @@
         </div>
     </div>
 </div>
+
 @include('Components.Footer') 

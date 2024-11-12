@@ -14,10 +14,10 @@ return new class extends Migration
     {
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
-            
             $table->unsignedBigInteger('mode_paiement_id');
             $table->unsignedBigInteger('car_id');
             $table->string('numeroCommande');
+            $table->string('status')->default('pending');
             $table->string('couleur');
             $table->foreign('mode_paiement_id')->references('id')->on('mode_paiments')->onDelete('cascade');
             $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');

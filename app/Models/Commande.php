@@ -12,7 +12,7 @@ class Commande extends Model
 
 
     public function modePaiement(){
-        return $this->hasOne(ModePaiment::class);
+        return $this->hasOne(ModePaiment::class, 'mode_paiement_id');
     }
 
     public function car()
